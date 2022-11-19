@@ -4,14 +4,14 @@ export const assignmentQuality = (
   { ...inputProps }: IQualityPropsForQuality
 ) => {
   const inputPropsTemp = { ...inputProps };
-  let availableRooms = boxes.filter((box: IBox) => !inputPropsTemp.assignedBoxesNumber.includes(box.number));
-  availableRooms = availableRooms.filter((box: IBox) => box.capacity < group.package.length);
+  let availableBoxes = boxes.filter((box: IBox) => !inputPropsTemp.assignedBoxesNumber.includes(box.number));
+  availableBoxes = availableBoxes.filter((box: IBox) => box.capacity < group.package.length);
   let assignment: IAssignmentDictionary | null = null;
   const assignedNumbers: string[] = [];
-  const foundSmallerWithNeighbours = [...Array.from(Array(availableRooms.length + 1).keys()).slice(2)].some((i) => {
+  const foundSmallerWithNeighbours = [...Array.from(Array(availableBoxes.length + 1).keys()).slice(2)].some((i) => {
     let currentDepthGroups: IBoxsGroupWithNeighbours[] = [];
-    availableRooms.forEach((rm: IBox) => {
-      const configuartions = getAllBoxesWithNeighboursConfiguration(rm, i, availableRooms);
+    availableBoxes.forEach((rm: IBox) => {
+      const configuartions = getAllBoxesWithNeighboursConfiguration(rm, i, availableBoxes);
       configuartions.forEach((conf: IBox[]) => {
         const capacityInGroup = conf.reduce((acc, box: IBox) => acc + box.capacity, 0);
         if (conf.length === i && capacityInGroup >= group.package.length) {
