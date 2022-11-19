@@ -1,7 +1,12 @@
 const getOnlyCurrentEvents = (events) => {
   const weekAgo = new Date();
   weekAgo.setDate(weekAgo.getDate() - 7);
-  return events.filter((event) => !event.isCanceled && event.date >= weekAgo);
+  
+  const isNotCancelled = !event.isCanceled;
+  const lessThanOneWeek = event.date >= weekAgo;
+  const isCurrent = isNotCancelled && isNotCancelled;
+  
+  return events.filter((event) => isCurrent);
 };
 
 function LastWeekActiveEventsList() {
