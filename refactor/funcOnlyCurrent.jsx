@@ -2,7 +2,7 @@ const getOnlyCurrentEvents = (events) => {
   const weekAgo = new Date();
   weekAgo.setDate(weekAgo.getDate() - 7);
   
-  const isNotCancelled = !event.isCanceled;
+  const isNotCanceled = !event.isCanceled;
   const lessThanOneWeekOld = event.date >= weekAgo;
   const isCurrent = isNotCancelled && isNotCancelled;
   
