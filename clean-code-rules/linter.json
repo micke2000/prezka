@@ -1,0 +1,33 @@
+// eslint.json
+"rules": {
+        "react/jsx-filename-extension": [ "warn", {"extensions": [".jsx",".tsx"]} ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "linebreak-style": 0,
+        "no-void": 0,
+        "react/destructuring-assignment": ["error", "always", { "ignoreClassFields": true }],
+        "prettier/prettier": [
+            "error",
+            {
+              "endOfLine": "auto"
+            }
+          ],
+          "no-param-reassign": ["error", {
+            "props": true,
+            "ignorePropertyModificationsFor": [
+              "state"
+            ]
+          }]
+    },
+}
+//.prettierrc
+{
+  "singleQuote": false,
+  "printWidth": 100
+}
