@@ -13,7 +13,7 @@ const useEvents = () => {
   return { events };
 };
 
-function ActiveUsersList() {
+function LastWeekActiveEventsList() {
   const { events } = useEvents();
   const weekAgo = new Date();
   weekAgo.setDate(weekAgo.getDate() - 7);
