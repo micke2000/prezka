@@ -1,14 +1,14 @@
  assignmentDialogHandler(
-        allRooms,
+        allBoxes,
         currentDialog,
         currentGroup,
         setIsSubmited,
         setConfirmed,
-        assignedRoomsNumbers,
+        assignedBoxesNumbers,
         setCurrentDialog,
         assignmentDicionariesArray,
         setAssignmentDicionariesArray,
-        setAssignedRoomsNumbers,
+        setAssignedBoxesNumbers,
         setCurrentGroup,
         setOpen,
         setAssigned
