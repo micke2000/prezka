@@ -1,0 +1,15 @@
+ assignmentDialogHandler(
+        allRooms,
+        currentDialog,
+        currentGroup,
+        setIsSubmited,
+        setConfirmed,
+        assignedRoomsNumbers,
+        setCurrentDialog,
+        assignmentDicionariesArray,
+        setAssignmentDicionariesArray,
+        setAssignedRoomsNumbers,
+        setCurrentGroup,
+        setOpen,
+        setAssigned
+);
